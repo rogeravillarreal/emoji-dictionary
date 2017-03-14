@@ -8,16 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var emojis = ["😀","😉","😎","😡","👹","👻"]
+    var emojis = ["😱", "😍", "👌", "😈", "💩"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -43,7 +44,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         defVC.emoji = sender as! String
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

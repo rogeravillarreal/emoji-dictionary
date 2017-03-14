@@ -9,27 +9,36 @@
 import UIKit
 
 class DefinitionViewController: UIViewController {
-    @IBOutlet weak var picLabel: UILabel!
     
-    @IBOutlet weak var definitionLabel: UILabel!
+    @IBOutlet var mainLabel: UILabel!
+    @IBOutlet var definitionLabel: UILabel!
     
     var emoji = "NO EMOJI"
-
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        mainLabel.text = emoji
         
-        picLabel.text = emoji
-        
-        if emoji == "😎" {
-            definitionLabel.text = "Sunglasses man"
+        switch emoji {
+        case "😱":
+            definitionLabel.text = "I am shocked"
+        case "😍":
+            definitionLabel.text = "I love this"
+        case "👌":
+            definitionLabel.text = "Very Nice"
+        case "😈":
+            definitionLabel.text = "I am the devil"
+        case "💩":
+            definitionLabel.text = "I am poop"
+        default:
+            definitionLabel.text = "I don't know"
         }
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
-
+    
 }

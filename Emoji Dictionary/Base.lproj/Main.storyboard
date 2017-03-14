@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BMz-K0-Z2x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BMz-K0-Z2x">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,8 +63,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a church thingy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-09-kMu">
-                                <rect key="frame" x="101.5" y="403" width="172" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Definition..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0A-26-UPy">
+                                <rect key="frame" x="16" y="361" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,15 +72,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="L0A-26-UPy" firstAttribute="centerX" secondItem="yLs-iq-1vO" secondAttribute="centerX" id="Af5-pb-pbY"/>
                             <constraint firstItem="VSd-jk-v0h" firstAttribute="top" secondItem="rvW-KQ-4HF" secondAttribute="bottom" constant="50" id="IOk-af-YLF"/>
+                            <constraint firstItem="L0A-26-UPy" firstAttribute="top" secondItem="VSd-jk-v0h" secondAttribute="bottom" constant="8" id="Naz-dv-Lxw"/>
                             <constraint firstItem="VSd-jk-v0h" firstAttribute="centerX" secondItem="yLs-iq-1vO" secondAttribute="centerX" id="QPQ-yL-MaH"/>
-                            <constraint firstItem="fKe-09-kMu" firstAttribute="centerX" secondItem="yLs-iq-1vO" secondAttribute="centerX" id="Xoc-Yy-Tue"/>
-                            <constraint firstItem="fKe-09-kMu" firstAttribute="top" secondItem="VSd-jk-v0h" secondAttribute="bottom" constant="50" id="ryv-73-6KS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L0A-26-UPy" secondAttribute="trailing" id="RiF-aQ-dAb"/>
+                            <constraint firstItem="L0A-26-UPy" firstAttribute="leading" secondItem="yLs-iq-1vO" secondAttribute="leadingMargin" id="hPe-Xf-WUa"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="definitionLabel" destination="fKe-09-kMu" id="B9l-Q5-8l8"/>
-                        <outlet property="picLabel" destination="VSd-jk-v0h" id="UeF-N7-vG8"/>
+                        <outlet property="definitionLabel" destination="L0A-26-UPy" id="7Ex-Nl-vz6"/>
+                        <outlet property="mainLabel" destination="VSd-jk-v0h" id="lda-Hl-29g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pue-n3-BbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
