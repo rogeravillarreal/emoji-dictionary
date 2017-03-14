@@ -69,18 +69,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Category..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYW-az-Tox">
+                                <rect key="frame" x="104.5" y="404" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Date Created..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMm-au-8Wh">
+                                <rect key="frame" x="88.5" y="447" width="198" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L0A-26-UPy" firstAttribute="centerX" secondItem="yLs-iq-1vO" secondAttribute="centerX" id="Af5-pb-pbY"/>
                             <constraint firstItem="VSd-jk-v0h" firstAttribute="top" secondItem="rvW-KQ-4HF" secondAttribute="bottom" constant="50" id="IOk-af-YLF"/>
                             <constraint firstItem="L0A-26-UPy" firstAttribute="top" secondItem="VSd-jk-v0h" secondAttribute="bottom" constant="8" id="Naz-dv-Lxw"/>
+                            <constraint firstItem="XYW-az-Tox" firstAttribute="top" secondItem="L0A-26-UPy" secondAttribute="bottom" constant="22" id="Ofl-ML-RzC"/>
                             <constraint firstItem="VSd-jk-v0h" firstAttribute="centerX" secondItem="yLs-iq-1vO" secondAttribute="centerX" id="QPQ-yL-MaH"/>
+                            <constraint firstItem="cMm-au-8Wh" firstAttribute="centerX" secondItem="yLs-iq-1vO" secondAttribute="centerX" id="Qix-gt-53i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L0A-26-UPy" secondAttribute="trailing" id="RiF-aQ-dAb"/>
+                            <constraint firstItem="XYW-az-Tox" firstAttribute="centerX" secondItem="yLs-iq-1vO" secondAttribute="centerX" id="ckN-Wa-Y0I"/>
                             <constraint firstItem="L0A-26-UPy" firstAttribute="leading" secondItem="yLs-iq-1vO" secondAttribute="leadingMargin" id="hPe-Xf-WUa"/>
+                            <constraint firstItem="cMm-au-8Wh" firstAttribute="top" secondItem="XYW-az-Tox" secondAttribute="bottom" constant="22" id="idR-yr-4VH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthYearTextLabel" destination="cMm-au-8Wh" id="czZ-56-EpX"/>
+                        <outlet property="categoryTextLabel" destination="XYW-az-Tox" id="iy1-QH-tIO"/>
                         <outlet property="definitionLabel" destination="L0A-26-UPy" id="7Ex-Nl-vz6"/>
                         <outlet property="mainLabel" destination="VSd-jk-v0h" id="lda-Hl-29g"/>
                     </connections>

@@ -12,28 +12,16 @@ class DefinitionViewController: UIViewController {
     
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var definitionLabel: UILabel!
+    @IBOutlet var categoryTextLabel: UILabel!
+    @IBOutlet var birthYearTextLabel: UILabel!
     
-    var emoji = "NO EMOJI"
-    
+    var emoji = Emoji()
     override func viewDidLoad() {
-        mainLabel.text = emoji
-        
-        switch emoji {
-        case "😱":
-            definitionLabel.text = "I am shocked"
-        case "😍":
-            definitionLabel.text = "I love this"
-        case "👌":
-            definitionLabel.text = "Very Nice"
-        case "😈":
-            definitionLabel.text = "I am the devil"
-        case "💩":
-            definitionLabel.text = "I am poop"
-        default:
-            definitionLabel.text = "I don't know"
-        }
-        
+        mainLabel.text = emoji.emojiString
+        definitionLabel.text = emoji.definition
+        birthYearTextLabel.text = "Birth Year: \(emoji.dateCreated)"
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
