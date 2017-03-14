@@ -12,12 +12,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
-    var emojis = ["😱", "😍", "👌", "😈", "💩"]
-    
+    var emojis: [Emoji] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        emojis = createEmojiArray()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = emojis[indexPath.row]
+        cell.textLabel?.text = String(emojis[indexPath.row].dateCreated)
         return cell
     }
     
@@ -42,6 +42,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let defVC = segue.destination as! DefinitionViewController
         defVC.emoji = sender as! String
+    }
+    
+    func createEmojiArray() -> [Emoji] {
+        
+        let emoji1 = Emoji()
+        emoji1.emojiString = "😱"
+        emoji1.definition = "Surpised"
+        emoji1.dateCreated = 2011
+        emoji1.category = "Smiley"
+        
+        let emoji2 = Emoji()
+        emoji2.emojiString = "😍"
+        emoji2.definition = "In Love"
+        emoji2.dateCreated = 2000
+        emoji2.category = "Face Emoji"
+        
+        let emoji3 = Emoji()
+        emoji3.emojiString = "👌"
+        emoji3.definition = "Okay"
+        emoji3.dateCreated = 2001
+        emoji3.category = "Hand"
+        
+        return [emoji1, emoji2, emoji3]
     }
     
     override func didReceiveMemoryWarning() {
